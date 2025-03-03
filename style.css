@@ -1,0 +1,163 @@
+/**
+ * Theme Name:        Meyo
+ * Theme URI:         https://example.com/themes/meyo
+ * Description:       Meyo is a modern WordPress theme that lets you write articles and blog posts with ease. We offer great support and friendly help!
+ * Version:           1.0.0
+ * Author:            Funduluka Shangala
+ * Author URI:        https://github.com/fshangala
+ * Tags:              block-patterns, full-site-editing
+ * Text Domain:       meyo
+ * Domain Path:       /assets/lang
+ * Tested up to:      6.4
+ * Requires at least: 6.2
+ * Requires PHP:      7.4
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+.ui-link-helper svg {
+  width: 22px;
+}
+
+.ui-link-helper {
+  position: fixed;
+  right: 0;
+  top: calc(50vh - 111px);
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 45px;
+  cursor: pointer;
+  border-left: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 5px 40px rgb(0 0 0 / 7%);
+  -moz-box-shadow: 0 5px 40px rgba(0, 0, 0, 7%);
+  box-shadow: 0 5px 40px rgb(0 0 0 / 7%);
+  padding: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #eaeaea;
+  border-right: 0;
+  z-index: 9999999;
+}
+
+.ui-link-helper .ui-tooltip {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(.7);
+  -moz-transform: scale(.7);
+  -ms-transform: scale(.7);
+  transform: scale(.7);
+  position: absolute;
+  background-color: #fff;
+  font-size: 13px;
+  margin: 0;
+  padding: 0px 20px;
+  font-family: inherit;
+  width: auto;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: .1px;
+  right: 10px;
+  top: 4px;
+  border-radius: 3px;
+  white-space: nowrap;
+  -webkit-box-shadow: 0 5px 40px rgb(0 0 0 / 7%), 0 0 3px -1px rgb(83 45 245 / 15%);
+  -moz-box-shadow: 0 5px 40px rgb(0 0 0 / 7%), 0 0 3px -1px rgb(83 45 245 / 15%);
+  box-shadow: 0 5px 40px rgb(0 0 0 / 7%), 0 0 3px -1px rgb(83 45 245 / 15%);
+  -moz-transition: all .3s cubic-bezier(0.64, -0.09, 0.13, 1.15);
+  -o-transition: all .3s cubic-bezier(0.64, -0.09, 0.13, 1.15);
+  transition: all .3s cubic-bezier(0.64, -0.09, 0.13, 1.15);
+  color: #794AFF;
+}
+
+.ui-link-helper .ui-tooltip-link:hover .ui-tooltip {
+  opacity: 1;
+  right: 60px;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.ui-link-helper .ui-tooltip-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 44px;
+  align-items: center;
+  transition: all .3s ease-in;
+}
+
+.ui-link-helper .ui-tooltip span {
+  display: block;
+  position: absolute;
+  right: -5px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+
+.ui-link-helper .ui-tooltip-link+.ui-tooltip-link {
+  border-top: 1px solid #eaeaea;
+}
+
+.ui-link-helper .ui-tooltip-link svg {
+  height: 20px;
+}
+
+.ui-tooltip-link:hover {
+  background: rgb(83 45 245 / 5%);
+}
+
+.ui-tooltip-link:hover svg path {
+  fill: #794AFF;
+}
+
+@media(max-width: 767px) {
+  .ui-link-helper {
+    display: none;
+  }
+}
+
+img:is([sizes="auto" i], [sizes^="auto," i]) {
+  contain-intrinsic-size: 3000px 1500px
+}
+
+img.wp-smiley,
+img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 0.07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+
+.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+  background-image: none !important;
+}
+
+@media screen and (max-height: 1024px) {
+
+  .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+  .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+    background-image: none !important;
+  }
+}
+
+@media screen and (max-height: 640px) {
+
+  .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+  .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+    background-image: none !important;
+  }
+}
