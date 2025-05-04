@@ -112,6 +112,22 @@ href='wp-content/plugins/uicore-framework/assets/fonts/themify-icons8a54.css?ver
 */
 function wp_meyo_enqueue_styles() {
     // Enqueue the CSS files
+
+    //More
+    wp_enqueue_style('ui-e-animated-border-css', get_template_directory_uri() . '/assets/css/animated-borderd63f.css', array(), null, 'all');
+    wp_enqueue_style('ui-e-logo-grid-css', get_template_directory_uri() . '/assets/css/elements/logo-grid9632.css', array(), null, 'all');
+    wp_enqueue_style('ui-e-grid-css', get_template_directory_uri() . '/assets/css/components/grid9632.css', array(), null, 'all');
+    wp_enqueue_style('ui-e-icon-box-css', get_template_directory_uri() . '/assets/css/elements/icon-box9632.css', array(), null, 'all');
+    wp_enqueue_style('ui-e-testimonial-carousel-css', get_template_directory_uri() . '/assets/css/elements/testimonial-carousel9632.css', array(), null, 'all');
+    wp_enqueue_style('swiper-css', get_template_directory_uri() . '/assets/css/swiper.min94a4.css', array(), null, 'all');
+    wp_enqueue_style('e-swiper-css', get_template_directory_uri() . '/assets/css/conditionals/e-swiper.min87cc.css', array(), null, 'all');
+    wp_enqueue_style('ui-e-carousel-css', get_template_directory_uri() . '/assets/css/components/carousel9632.css', array(), null, 'all');
+    wp_enqueue_style('ui-e-accordion-css', get_template_directory_uri() . '/assets/css/elements/accordion9632.css', array(), null, 'all');
+    wp_enqueue_style('ui-e-fluid-css', get_template_directory_uri() . '/assets/css/fluidd63f.css', array(), null, 'all');
+    wp_enqueue_style('ep-mailchimp-css', get_template_directory_uri() . '/assets/css/ep-mailchimp0566.css', array(), null, 'all');
+    wp_enqueue_style('widget-social-icons-css', get_template_directory_uri() . '/assets/css/widget-social-icons.min87cc.css', array(), null, 'all');
+    wp_enqueue_style('e-apple-webkit-css', get_template_directory_uri() . '/assets/css/conditionals/apple-webkit.min87cc.css', array(), null, 'all');
+
     wp_enqueue_style('elementor-frontend-css', get_template_directory_uri() . '/assets/css/frontend.min87cc.css', array(), '3.28.3', 'all');
     wp_enqueue_style('elementor-post-45-css', get_template_directory_uri() . '/assets/css/post-452c5f.css', array(), '1721853134', 'all');
     wp_enqueue_style('e-animation-fadeInUp-css', get_template_directory_uri() . '/assets/css/fadeInUp.min87cc.css', array(), '3.28.3', 'all');
@@ -139,20 +155,6 @@ function wp_meyo_enqueue_styles() {
     wp_enqueue_script('jquery-ui-core-js', get_template_directory_uri() . '/assets/js/jquery/ui/core.minb37e.js', array(), null, true);
     wp_enqueue_script('jquery-migrate-js', get_template_directory_uri() . '/assets/js/jquery/jquery-migrate.min5589.js', array(), '3.4.1', true);
 
-    //More
-    wp_enqueue_style('ui-e-animated-border-css', get_template_directory_uri() . '/assets/css/animated-borderd63f.css', array(), null, 'all');
-    wp_enqueue_style('ui-e-logo-grid-css', get_template_directory_uri() . '/assets/css/elements/logo-grid9632.css', array(), null, 'all');
-    wp_enqueue_style('ui-e-grid-css', get_template_directory_uri() . '/assets/css/components/grid9632.css', array(), null, 'all');
-    wp_enqueue_style('ui-e-icon-box-css', get_template_directory_uri() . '/assets/css/elements/icon-box9632.css', array(), null, 'all');
-    wp_enqueue_style('ui-e-testimonial-carousel-css', get_template_directory_uri() . '/assets/css/elements/testimonial-carousel9632.css', array(), null, 'all');
-    wp_enqueue_style('swiper-css', get_template_directory_uri() . '/assets/css/swiper.min94a4.css', array(), null, 'all');
-    wp_enqueue_style('e-swiper-css', get_template_directory_uri() . '/assets/css/conditionals/e-swiper.min87cc.css', array(), null, 'all');
-    wp_enqueue_style('ui-e-carousel-css', get_template_directory_uri() . '/assets/css/components/carousel9632.css', array(), null, 'all');
-    wp_enqueue_style('ui-e-accordion-css', get_template_directory_uri() . '/assets/css/elements/accordion9632.css', array(), null, 'all');
-    wp_enqueue_style('ui-e-fluid-css', get_template_directory_uri() . '/assets/css/fluidd63f.css', array(), null, 'all');
-    wp_enqueue_style('ep-mailchimp-css', get_template_directory_uri() . '/assets/css/ep-mailchimp0566.css', array(), null, 'all');
-    wp_enqueue_style('widget-social-icons-css', get_template_directory_uri() . '/assets/css/widget-social-icons.min87cc.css', array(), null, 'all');
-    wp_enqueue_style('e-apple-webkit-css', get_template_directory_uri() . '/assets/css/conditionals/apple-webkit.min87cc.css', array(), null, 'all');
     wp_enqueue_script('bdt-uikit-js', get_template_directory_uri() . '/assets/js/bdt-uikit.min4ecf.js', array(), null, true);
     wp_enqueue_script('ep-switcher-js', get_template_directory_uri() . '/assets/js/modules/ep-switcher.min0566.js', array(), null, true);
     wp_enqueue_script('ui-e-swiper-js', get_template_directory_uri() . '/assets/js/lib/swiper5ca1.js', array(), null, true);
@@ -173,3 +175,19 @@ function wp_meyo_enqueue_styles() {
 
 }
 add_action('wp_enqueue_scripts', 'wp_meyo_enqueue_styles');
+
+
+add_filter('body_class', function ($classes) {
+    // Add a custom class to the body element
+    $classes[] = 'home wp-singular page-template-default page page-id-15 wp-embed-responsive wp-theme-uicore-pro ui-a-dsmm-slide elementor-default elementor-kit-3 elementor-page elementor-page-15';
+    return $classes;
+});
+
+add_filter('wp_head', function () {
+    // Add custom CSS to the head section
+    echo '<style>
+        .my-custom-class {
+            background-color: #f0f0f0; /* Change this to your desired color */
+        }
+    </style>';
+});
